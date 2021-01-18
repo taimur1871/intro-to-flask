@@ -2,6 +2,7 @@ import tensorflow as tf
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+import os
 
 
 def read_image(image):
@@ -21,8 +22,8 @@ def get_category(img):
     Returns:
         [str]: Prediction
     """
-
-    path = 'static/model/'
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(ROOT_DIR + '/static/model/')
     tflite_model_file = 'converted_model.tflite'
 
     # Load TFLite model and allocate tensors.
@@ -58,4 +59,6 @@ def plot_category(img):
         img [jpg]: image file
     """
     read_img = mpimg.imread(img)
-    plt.imsave('static/images/output.png', read_img)
+    ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(ROOT_DIR + '/static/images/output.png')
+    plt.imsave(path, read_img)
