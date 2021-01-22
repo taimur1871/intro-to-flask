@@ -14,7 +14,7 @@ def get_category(img):
         [str]: Prediction
     """
     # open image
-    interpreter = tf.lite.Interpreter(model_path="converted_model.tflite")
+    interpreter = tf.lite.Interpreter(model_path="model/converted_model.tflite")
     interpreter.allocate_tensors()
 
     # get input and output tensors
