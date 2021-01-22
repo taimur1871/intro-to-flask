@@ -13,6 +13,7 @@ def get_category(img):
     Returns:
         [str]: Prediction
     """
+    
     pass
 
 

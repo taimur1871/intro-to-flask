@@ -8,12 +8,15 @@ app = Flask(__name__)
 def rock_paper_scissor():
     # Write the GET Method to get the index file
 
+    
     # Write the POST Method to post the results file
+    
 
     # Read file from upload
     # Get category of prediction
     # Plot the category
     # Render the result template
+    
     pass
 
 
